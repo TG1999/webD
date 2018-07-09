@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="my-div">
+    </div>
+    <ul id="div2"></ul>
+    <p></p>
+</body>
+<script>
+    
+        console.log("hi");
+        a=10;
+        function func1(){
+            console.log("hie");
+            return a;
+        }
+        var div=document.getElementById("div2");
+        startime=new Date().getTime();
+        var string="";
+        
+        for(let i=1;i<1001;i++)
+        {   if(i%15==0)
+            {string=string+("<li>Fizz Buzz</li>");continue;}
+            if(i%3==0)
+            {string=string+("<li>Fizz</li>");continue;}
+            if(i%5==0)
+            {string=string+("<li>Buzz</li>");continue;}
+            string=string+"<li>"+i+"</li>";
+        }
+        div.innerHTML=string;
+        endtime=new Date().getTime();
+        console.log(endtime-startime);
+    </script>
+</html>

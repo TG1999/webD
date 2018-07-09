@@ -1,0 +1,38 @@
+div{
+    height: 50px;
+    width: 50px;
+    background-color: blue;
+    margin: 2vw;
+}
+
+#div1:hover {
+    background-color: maroon;
+}
+#div4{
+    animation-name: myanim;
+    animation-duration: 3s;
+}
+#div3{
+    transform: skewX(90deg);
+}
+#div2{
+    transform: skewX(30deg);
+    transform: skewY(30deg)
+}
+#div5{
+    transform: rotate(10deg),scale(0.7,0,7);
+}
+@keyframes myanim{
+    0%{
+        transform: translate(0px,0px)
+    }
+    25%{
+        transform: translate(50px,0px)
+    }
+    75%{
+        transform: translate(0px,50px)
+    }
+    100%{
+        transform: translate(50px,50px)
+    }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="enter values" id="in"><button onclick="rms()">RMS</button>
+<h1 id="heading"></h1>
+</body>
+<script>
+    function rms(){
+        arr=[];
+        var input=document.getElementById("in").value;
+        var element='';
+        for(i=0;i<=input.length;i++)
+        {   
+            if(input[i]==',' || i===input.length)
+            {   element=parseInt(element);
+                arr.push(element);
+                element='';
+            }
+            else{
+                element=element+input[i];
+            }
+        }
+        arr=arr.map(function(value,index,arr){
+            return value*value;
+        })
+        console.log(arr);
+        mean=arr.reduce(function(accum,value,index,arr){
+            return accum+value;
+        },0)/arr.length;
+        console.log(mean);
+        document.getElementById('heading').innerHTML=Math.sqrt(mean);
+    }
+</script>
+</html>

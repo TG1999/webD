@@ -1,0 +1,13 @@
+#box{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: blue;
+    height:100%;
+    width:400px;
+}
+.small{
+    height: 200px;
+    background-color: red;
+    width: 100px;
+    margin: 10px;
+}
